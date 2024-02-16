@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 
 import java.util.Objects;
 
-@Entity
+@Entity(name = "tb_news")
 public class News extends BaseItem{
 
 
