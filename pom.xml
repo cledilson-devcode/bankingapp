@@ -51,11 +51,9 @@
 		</dependency>
 
 
-
-
-
-
 	</dependencies>
+
+
 
 	<build>
 		<plugins>
@@ -67,8 +65,22 @@
 						<builder>paketobuildpacks/builder-jammy-base:latest</builder>
 					</image>
 				</configuration>
+
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.cledilsondevcode.bankingapp.BankingappApplication</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+
+
 
 </project>
